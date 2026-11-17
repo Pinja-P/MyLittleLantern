@@ -197,10 +197,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 541.1861, y: 25.234608}
-      - {x: -36.6369, y: 25.072971}
-      - {x: -35.822983, y: -405.63632}
-      - {x: 542.1676, y: -405.9829}
+    - - {x: 422.27258, y: 21.270824}
+      - {x: -25.616573, y: 21.53072}
+      - {x: -24.957645, y: -311.10788}
+      - {x: 422.83902, y: -312.59534}
   m_UseDelaunayMesh: 1
 --- !u!1 &924830819
 GameObject:
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4ae53863f8dc94c88fb51f05e5b2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  walkSpeed: 10
+  walkSpeed: 5
   sneakSpeed: 3
 --- !u!4 &1132571928
 Transform:
