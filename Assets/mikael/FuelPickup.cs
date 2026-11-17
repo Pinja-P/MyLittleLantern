@@ -14,7 +14,7 @@ public class FuelPickup : MonoBehaviour
     {
        if(pickupAllowed && Input.GetKeyDown(KeyCode.F)||Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Lyhty>().CurrentFuel += 20;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Lyhty>().CurrentFuel += 50;
             Destroy(gameObject);
         }
     }
