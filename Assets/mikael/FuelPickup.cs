@@ -1,28 +1,47 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FuelPickup : MonoBehaviour
 {
     private bool pickupAllowed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Lyhty playerLyhty;
+    private float fuelAmount = 50f;
+
+
     void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+  
+    public void PickUp(InputAction.CallbackContext context)
     {
-       if(pickupAllowed && Input.GetKeyDown(KeyCode.F)||Input.GetKeyDown(KeyCode.Space))
+       if(pickupAllowed && context.performed)
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Lyhty>().CurrentFuel += 50;
-            Destroy(gameObject);
+            
+            playerLyhty.CurrentFuel += fuelAmount;
+           Destroy(gameObject);
+            Debug.Log("Fuel picked up");
         }
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            pickupAllowed = true;
+            playerLyhty = other.GetComponent<Lyhty>();
+            pickupAllowed = true; 
+            Debug.Log("Player entered trigger");
+            
         }
+       
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerLyhty = null;
+            pickupAllowed = false;
+            Debug.Log("Player exited trigger");
+        }
+        
     }
 }

@@ -28,7 +28,8 @@ public class Lyhty : MonoBehaviour
     public float brightIntensity = 3.0f;
     public float brightRange = 15.0f;
     public float brightburnMultiplier = 2.0f;
-
+    
+    [Header("Fuel Settings")]
     public float fuelcapacity = 100f;
     public float fuelburnout = 1f;
     public float CurrentFuel;
@@ -42,7 +43,7 @@ public class Lyhty : MonoBehaviour
         }
         UpdateLight();
     }
-    void update()
+    void Update()
     {
         Lanterfuel();
         LanterBrigthness();
