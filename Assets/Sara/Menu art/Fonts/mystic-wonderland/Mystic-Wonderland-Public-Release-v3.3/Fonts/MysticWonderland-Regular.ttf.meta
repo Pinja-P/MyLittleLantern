@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6103892d239ef834ab763b79ab0f9571
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Mystic Wonderland
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d6337087de8d6d1489b7108a4794cdcd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

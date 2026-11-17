@@ -1,0 +1,14 @@
+MYSTIC WONDERLAND - CHANGELOG
+
+Version 3.300
+
+- Illustrator PDF vector outlines preserved
+- full uppercase, lowercase, number and symbol coverage
+- German and common European language support
+- corrected vertical metrics for long ascenders and descenders
+- 2,704 individually verified A-Z/a-z kerning combinations
+- 4,576 individually verified letter/symbol combinations
+- kerning applied consistently in OTF and TTF
+- WOFF2 webfont and CSS included
+- OpenType alternates, swashes and ligatures included
+- technical and visual QA completed

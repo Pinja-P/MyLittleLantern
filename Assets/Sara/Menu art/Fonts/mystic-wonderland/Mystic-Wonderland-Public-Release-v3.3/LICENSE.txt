@@ -1,0 +1,57 @@
+MYSTIC WONDERLAND END USER LICENSE
+Version 1.0 - July 2026
+
+Copyright 2026 Florian Ascherl / Eli & Flo.
+All rights reserved.
+
+By downloading, installing or using Mystic Wonderland, the recipient agrees
+to the following terms.
+
+1. PERMITTED USE
+
+The recipient may install and use the font in personal and commercial
+end products, including logos, branding, printed material, packaging,
+advertising, social-media graphics, websites, video, music artwork and
+client work.
+
+The supplied WOFF2 file may be used on websites owned or managed by the
+recipient or their client.
+
+2. FONT FILE RESTRICTIONS
+
+The font files may not be sold, sublicensed, shared, redistributed, uploaded
+to public font libraries or made available for download by third parties.
+
+The font files may not be included in templates, applications, games,
+software, electronic publications or other products in a form that allows
+another person to extract or reuse the font without separate written
+permission.
+
+The font may not be converted, modified, renamed or used to create another
+typeface for distribution without separate written permission.
+
+3. CLIENT AND SERVICE-PROVIDER USE
+
+Finished artwork may be delivered to clients. A client, printer, contractor
+or other service provider who needs access to the actual font files requires
+their own license or written permission from the copyright holder.
+
+4. OWNERSHIP
+
+The font software remains the intellectual property of Florian Ascherl /
+Eli & Flo. This license grants usage rights only and does not transfer
+ownership.
+
+5. WARRANTY
+
+The font is provided as-is. To the maximum extent permitted by applicable
+law, the copyright holder is not liable for indirect, incidental or
+consequential damages resulting from use of the font.
+
+6. ADDITIONAL LICENSES
+
+Application embedding, editable template distribution, server use,
+large multi-user installations and redistribution require a separate
+written license.
+
+For additional licensing, contact Florian Ascherl / Eli & Flo.
