@@ -52,7 +52,7 @@
                     "id": "9a054c0b-02f9-4488-b450-01028100d75d",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false,
                     "priority": 0
                 },
@@ -62,7 +62,7 @@
                     "id": "3534d0bb-c8c6-4b84-9f4a-82bab4457114",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false,
                     "priority": 0
                 }
