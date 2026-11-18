@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 397381647068546985}
   - component: {fileID: 6511637084899461172}
   - component: {fileID: 7052413860115327199}
+  - component: {fileID: 3955589889142054766}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -148,20 +149,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8190c0bac150c46aa3ff842a0d3caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lyhty
-  lanterlight: {fileID: 0}
-  brigntnessLevel: 2
-  dimIntensity: 1
-  dimRange: 5
-  dimburnMultiplier: 0.5
-  midIntensity: 2
-  midRange: 10
-  midburnMultiplier: 1
-  brightIntensity: 3
-  brightRange: 15
-  brightburnMultiplier: 2
-  fuelcapacity: 100
-  fuelburnout: 1
-  CurrentFuel: 0
+  lanternRenderer: {fileID: 0}
+  brightnessLevel: 2
+  dimSprite: {fileID: 0}
+  dimBurnMultiplier: 0.5
+  midSprite: {fileID: 0}
+  midBurnMultiplier: 1
+  brightSprite: {fileID: 0}
+  brightBurnMultiplier: 2
+  fuelCapacity: 100
+  fuelBurnout: 1
+  currentFuel: 0
 --- !u!114 &7052413860115327199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,8 +261,36 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 852140f2-7766-474d-8707-702459ba45f3
     m_ActionName: 'Player/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 59db90ec-4952-4168-bc1c-cd7b651d516b
+    m_ActionName: 'Player/Pickup[/Keyboard/f]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9a054c0b-02f9-4488-b450-01028100d75d
+    m_ActionName: 'Player/LightUp[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3534d0bb-c8c6-4b84-9f4a-82bab4457114
+    m_ActionName: 'Player/LightDown[/Keyboard/q]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3955589889142054766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2602499978958261702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d4be16459aa724db0a2b8bf6521424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  GameIsPaused: 0
+  pauseMenuUI: {fileID: 0}
+  menuSelection: {fileID: 0}
+  settingsUI: {fileID: 0}
