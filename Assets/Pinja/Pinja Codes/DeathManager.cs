@@ -15,7 +15,7 @@ public class DeathManager : MonoBehaviour
      {
          if (collision.CompareTag("Death"))
          {
-             collision.transform.position = respawnPoint.position;
+             transform.position = respawnPoint.position;
          }
      } 
 
