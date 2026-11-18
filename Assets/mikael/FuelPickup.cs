@@ -19,6 +19,7 @@ public class FuelPickup : MonoBehaviour
         {
 
             playerLyhty.currentFuel = Mathf.Min(playerLyhty.currentFuel + fuelAmount, playerLyhty.fuelCapacity);
+            playerLyhty.UpdateSprite();
             Destroy(gameObject);
             Debug.Log("Fuel picked up");
         }

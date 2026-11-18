@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,6 +31,7 @@ public class Lyhty : MonoBehaviour
     public float fuelCapacity = 100f;
     public float fuelBurnout = 1f;
     public float currentFuel;
+    internal static Lyhty instance;
 
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class Lyhty : MonoBehaviour
         {
             lanternRenderer = GetComponent<SpriteRenderer>();
         }
+        instance = this;
     }
 
     private void Start()
@@ -94,7 +97,7 @@ public class Lyhty : MonoBehaviour
             Debug.Log("Brightness increased to: " + brightnessLevel);
         }
     }
-    private void UpdateSprite()
+    public void UpdateSprite()
     {
         if (lanternRenderer == null) return;
 
@@ -104,7 +107,11 @@ public class Lyhty : MonoBehaviour
             lanternRenderer.enabled = false;
             return;
         }
-
+        
+        
+            lanternRenderer.enabled = true;
+            
+        
 
         switch (brightnessLevel)
         {
