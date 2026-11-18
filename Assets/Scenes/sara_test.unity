@@ -386,6 +386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause_menu
       objectReference: {fileID: 0}
+    - target: {fileID: 751693934791544257, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1694607423825235341, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
       propertyPath: m_Camera
       value: 
