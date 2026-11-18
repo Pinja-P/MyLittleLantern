@@ -10,6 +10,7 @@ public class Checkpoint : MonoBehaviour
         {
             DeathManager.Death.respawnPoint = transform;
             trigger.enabled = false;
+            Debug.Log("New Checkpoint Set");
         }
     }
 }

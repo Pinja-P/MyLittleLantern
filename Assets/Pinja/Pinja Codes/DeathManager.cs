@@ -9,11 +9,14 @@ public class DeathManager : MonoBehaviour
     {
         Death = this;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            collision.transform.position = respawnPoint.position;
-        }
-    }
+
+
+     private void OnTriggerEnter2D(Collider2D collision)
+     {
+         if (collision.CompareTag("Death"))
+         {
+             collision.transform.position = respawnPoint.position;
+         }
+     } 
+
 }
