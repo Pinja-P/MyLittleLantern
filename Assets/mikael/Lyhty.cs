@@ -70,34 +70,41 @@ public class Lyhty : MonoBehaviour
             }
         }
     }
-    public void LightDown(InputAction.CallbackContext context) 
+    public void LightDown(InputAction.CallbackContext context)
     {
-Debug.Log("Brightness decreased to: " + brightnessLevel);
+
         if (currentFuel <= 0f) return;
 
         if (context.performed)
         {
             brightnessLevel = Mathf.Clamp(brightnessLevel - 1, 1, 3);
             UpdateSprite();
-            
-        }
-
+            Debug.Log("Brightness decreased to: " + brightnessLevel);
     }
+        }
+    
     public void LightUp(InputAction.CallbackContext context)
-    { Debug.Log("Brightness increased to: " + brightnessLevel);
+    {
         if (currentFuel <= 0f) return;
+
         if (context.performed)
         {
             brightnessLevel = Mathf.Clamp(brightnessLevel + 1, 1, 3);
             UpdateSprite();
-           
+            Debug.Log("Brightness increased to: " + brightnessLevel);
         }
     }
     private void UpdateSprite()
     {
-        if (lanternRenderer == null || currentFuel <= 0f) return;
+        if (lanternRenderer == null) return;
 
-        lanternRenderer.enabled = true;
+        
+        if (currentFuel <= 0f)
+        {
+            lanternRenderer.enabled = false;
+            return;
+        }
+
 
         switch (brightnessLevel)
         {
