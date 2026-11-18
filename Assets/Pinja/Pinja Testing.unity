@@ -1992,6 +1992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathManager
   respawnPoint: {fileID: 706430563}
+  CMCamera: {fileID: 7113223643543344853}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
