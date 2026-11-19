@@ -13,7 +13,10 @@ public class PlayerMovement : MonoBehaviour
 
     //Sneak
     public float sneakSpeed = 2f;
-
+    
+    //BatCarry
+    public bool batCarry = false;
+    public GameObject batCarrier;
 
     void Start()
     {
@@ -22,7 +25,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        if(batCarry)
+        { 
+            transform.position = batCarrier.transform.position;
+            return;
+        }
         playerRB.linearVelocity = moveInput * moveSpeed;
 
     }

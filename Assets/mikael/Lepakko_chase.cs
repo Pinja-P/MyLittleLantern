@@ -10,15 +10,16 @@ public class Lepakko_chase : MonoBehaviour
     
     private bool isChasing = false;
     private bool isStopped = false;
-    private Transform targetPlayer;
-    private GameObject goAwayBat;
-    private Collider2D GoAwayBat;
+    public GameObject targetPlayer;
+    public GameObject goAwayBat;
+    public bool carryingPlayer;
+
 
     void Start()
     {
-        targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
+        targetPlayer = GameObject.FindGameObjectWithTag("Player");
         goAwayBat = GameObject.FindGameObjectWithTag("GoAwayBat");
-        GoAwayBat = goAwayBat.GetComponent<Collider2D>();
+        
 
     }
 
@@ -27,13 +28,18 @@ public class Lepakko_chase : MonoBehaviour
         if (isChasing && targetPlayer != null)
         {
             CheckLanter();
-            transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, targetPlayer.transform.position, speed * Time.deltaTime);
+        
+            if(carryingPlayer)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, goAwayBat.transform.position, speed * Time.deltaTime);
+            }
         }
        if (isStopped)
         {
-            transform.position = Vector3.MoveTowards(transform.position,goAwayBat.transform.position, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position,goAwayBat.transform.position, speed * Time.deltaTime);
             
-            if(Vector3.Distance(transform.position, goAwayBat.transform.position) < 0.1f)
+            if(Vector2.Distance(transform.position, goAwayBat.transform.position) < 0.1f)
             {
                 Destroy(gameObject);
             }
@@ -48,7 +54,7 @@ public class Lepakko_chase : MonoBehaviour
             return;
         }
         isStopped = false;
-        targetPlayer = player;
+        targetPlayer = player.gameObject;
         isChasing = true;
     }
 
@@ -68,11 +74,14 @@ public class Lepakko_chase : MonoBehaviour
         isStopped = true;
         
     }
-    public void OnTriggerEnter2D(Collider2D player)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-       if(player.CompareTag("Player"))
+       if (!carryingPlayer && collision.gameObject.tag == "Player")
         {
-            player = GoAwayBat;
+            carryingPlayer = true;
+            collision.gameObject.GetComponent<PlayerMovement>().batCarry = true;
+            collision.gameObject.GetComponent<PlayerMovement>().batCarrier = gameObject;
+
 
             Debug.Log("Player collided with Lepakko");
         }
