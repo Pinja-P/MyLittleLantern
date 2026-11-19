@@ -7,23 +7,28 @@ public class trigger_area : MonoBehaviour
     public GameObject LepakkoSpawn;
     public Transform player;
     public Lepakko_chase Lepakko;
+    private bool HasSpawned = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!HasSpawned && other.CompareTag("Player"))
         {   
-            Instantiate(LepakkoPrefab, LepakkoSpawn.transform.position, Quaternion.identity);
-
-           
-                Lepakko.StartChasing(other.transform);
+            HasSpawned = true;
+            GameObject spawnedObj = Instantiate(LepakkoPrefab, LepakkoSpawn.transform.position, Quaternion.identity);
             
+
+            if (spawnedObj.TryGetComponent(out Lepakko_chase batScript))
+            {
+                Lepakko = batScript;
+                Lepakko.StartChasing(other.transform);
+            }
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") && Lepakko != null)
         {
-         
+         Lepakko.StartChasing(other.transform);
         }
     }
 }
