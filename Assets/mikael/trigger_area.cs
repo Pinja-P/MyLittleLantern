@@ -4,12 +4,15 @@ using UnityEngine;
 public class trigger_area : MonoBehaviour
 {
     public GameObject LepakkoPrefab;
-    public GameObject LepakkoSpawn;
-    public Transform player;
+    private GameObject LepakkoSpawn;
+   
     public Lepakko_chase Lepakko;
     private bool HasSpawned = false;
   
-
+    void Start() 
+    {
+        LepakkoSpawn = GameObject.FindGameObjectWithTag("Lepakko_Spawn");
+    }
    
 
     private void OnTriggerEnter2D(Collider2D other)
