@@ -26135,42 +26135,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 28.851273
       objectReference: {fileID: 0}
-    - target: {fileID: 5563803533250964009, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_Size.y
-      value: 0.23306274
-      objectReference: {fileID: 0}
-    - target: {fileID: 5563803533250964009, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5563803533250964009, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 5563803533250964009, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.043
-      objectReference: {fileID: 0}
-    - target: {fileID: 5563803533250964009, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.6679688
-      objectReference: {fileID: 0}
-    - target: {fileID: 5563803533250964009, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.6485224
-      objectReference: {fileID: 0}
-    - target: {fileID: 5745264015913008153, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -3336651653256611827, guid: feeb1d3d0c5a1fd49b84dbbcfd1c0ccf, type: 3}
-    - target: {fileID: 5745264015913008153, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5745264015913008153, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6253406889901126300, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -181.30917
