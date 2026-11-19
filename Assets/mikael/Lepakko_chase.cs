@@ -7,15 +7,18 @@ public class Lepakko_chase : MonoBehaviour
 {
     public float speed = 3f;
     
-    private Transform targetPlayer;
+    
     private bool isChasing = false;
     private bool isStopped = false;
+    private Transform targetPlayer;
     private GameObject goAwayBat;
+    private Collider2D GoAwayBat;
 
     void Start()
     {
-       
+        targetPlayer = GameObject.FindGameObjectWithTag("Player").transform;
         goAwayBat = GameObject.FindGameObjectWithTag("GoAwayBat");
+        GoAwayBat = goAwayBat.GetComponent<Collider2D>();
 
     }
 
@@ -69,7 +72,7 @@ public class Lepakko_chase : MonoBehaviour
     {
        if(player.CompareTag("Player"))
         {
-        
+            player = GoAwayBat;
 
             Debug.Log("Player collided with Lepakko");
         }
