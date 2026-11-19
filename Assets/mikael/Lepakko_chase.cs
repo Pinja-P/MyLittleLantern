@@ -4,6 +4,7 @@ using UnityEngine;
 public class Lepakko_chase : MonoBehaviour
 {
     public float speed = 3f;
+   
     private Transform targetPlayer;
     private bool isChasing = false;
 
@@ -14,7 +15,7 @@ public class Lepakko_chase : MonoBehaviour
             CheckLanter();
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, speed * Time.deltaTime);
         }
-        
+       
     }
 
     public void StartChasing(Transform player)
@@ -37,7 +38,7 @@ public class Lepakko_chase : MonoBehaviour
     }
     public void StopChasing()
     {
-     isChasing = false;
-     targetPlayer = null;
-    }
+        isChasing = false;
+        targetPlayer = null;
+    } 
 }

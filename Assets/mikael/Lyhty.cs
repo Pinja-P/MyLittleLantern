@@ -42,7 +42,7 @@ public class Lyhty : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
+    public void Start()
     {
         currentFuel = fuelCapacity;
         UpdateSprite();
@@ -54,7 +54,7 @@ public class Lyhty : MonoBehaviour
         
     }
 
-    private void HandleFuel()
+    public void HandleFuel()
     {
         if (currentFuel <= 0f) return;
 
