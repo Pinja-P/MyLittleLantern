@@ -4,6 +4,7 @@ public class DeathManager : MonoBehaviour
 {
     public static DeathManager Death;
     public Transform respawnPoint;
+    public GameObject Camera;
 
     private void Awake()
     {
