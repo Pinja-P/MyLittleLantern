@@ -29,6 +29,12 @@ public class Lepakko_chase : MonoBehaviour
        if (isStopped)
         {
             transform.position = Vector3.MoveTowards(transform.position,goAwayBat.transform.position, speed * Time.deltaTime);
+            
+            if(Vector3.Distance(transform.position, goAwayBat.transform.position) < 0.1f)
+            {
+                Destroy(gameObject);
+            }
+
         }
     }
 
@@ -58,5 +64,14 @@ public class Lepakko_chase : MonoBehaviour
         targetPlayer = null;
         isStopped = true;
         
-    } 
+    }
+    public void OnTriggerEnter2D(Collider2D player)
+    {
+       if(player.CompareTag("Player"))
+        {
+        
+
+            Debug.Log("Player collided with Lepakko");
+        }
+    }
 }
