@@ -1,12 +1,23 @@
+using System;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Lepakko_chase : MonoBehaviour
 {
     public float speed = 3f;
-   
+    
     private Transform targetPlayer;
     private bool isChasing = false;
+    private bool isStopped = false;
+    private GameObject goAwayBat;
+
+    void Start()
+    {
+       
+        goAwayBat = GameObject.FindGameObjectWithTag("GoAwayBat");
+
+    }
 
     void Update()
     {
@@ -15,7 +26,10 @@ public class Lepakko_chase : MonoBehaviour
             CheckLanter();
             transform.position = Vector3.MoveTowards(transform.position, targetPlayer.position, speed * Time.deltaTime);
         }
-       
+       if (isStopped)
+        {
+            transform.position = Vector3.MoveTowards(transform.position,goAwayBat.transform.position, speed * Time.deltaTime);
+        }
     }
 
     public void StartChasing(Transform player)
@@ -24,7 +38,7 @@ public class Lepakko_chase : MonoBehaviour
         {
             return;
         }
-
+        isStopped = false;
         targetPlayer = player;
         isChasing = true;
     }
@@ -33,12 +47,16 @@ public class Lepakko_chase : MonoBehaviour
     {
         if (Lyhty.instance != null && Lyhty.instance.brightnessLevel >= 3)
         {
-        StopChasing();
+            StopChasing();
         }
     }
+
+ 
     public void StopChasing()
     {
         isChasing = false;
         targetPlayer = null;
+        isStopped = true;
+        
     } 
 }
