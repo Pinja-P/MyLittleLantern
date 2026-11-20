@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private Rigidbody2D playerRB;
+    public CinemachineCamera CMCameraMain;
+    public CinemachineCamera CMCameraStill;
 
     //Movement
     float moveSpeed;
@@ -25,14 +28,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Update()
-    {   
-        if(batCarry)
-        { 
-            transform.position = batCarrier.transform.position;
-            return;
-        }
+    {
         playerRB.linearVelocity = moveInput * moveSpeed;
-
+        
+        BatCarry();
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -54,17 +53,14 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Walking");
         }
 
-        /* if (Keyboard.current.leftShiftKey.isPressed)
-         {
-             moveSpeed = sneakSpeed;
-             Debug.Log("Sneaking");
-         } */
+    }
 
-        /* if (Input.GetKey(KeyCode.LeftShift))
-         {
-             moveSpeed = sneakSpeed;
-             Debug.Log("Sneaking");
-         } */
-
+    public void BatCarry()
+    {
+        if (batCarry)
+        {
+            transform.position = batCarrier.transform.position;
+            return;
+        }      
     }
 }

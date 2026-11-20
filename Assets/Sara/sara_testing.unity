@@ -397,8 +397,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   LepakkoPrefab: {fileID: 0}
-  LepakkoSpawn: {fileID: 0}
-  player: {fileID: 1722248189}
   Lepakko: {fileID: 2046112722}
 --- !u!61 &620382271
 BoxCollider2D:
@@ -498,6 +496,10 @@ PrefabInstance:
     - target: {fileID: 2602499978958261702, guid: 46a60e9f531bc4e4e807b1561252b3b9, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955589889142054766, guid: 46a60e9f531bc4e4e807b1561252b3b9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3955589889142054766, guid: 46a60e9f531bc4e4e807b1561252b3b9, type: 3}
       propertyPath: settingsUI
@@ -1172,6 +1174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 3
+  targetPlayer: {fileID: 0}
+  goAwayBat: {fileID: 0}
+  carryingPlayer: 0
 --- !u!212 &2046112723
 SpriteRenderer:
   serializedVersion: 2
