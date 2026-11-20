@@ -6,8 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
     private Rigidbody2D playerRB;
-    public CinemachineCamera CMCameraMain;
-    public CinemachineCamera CMCameraStill;
 
     //Movement
     float moveSpeed;

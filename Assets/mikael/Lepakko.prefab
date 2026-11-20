@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d372575a47a78d4fb137a31709b5909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 3
+  speed: 5
   targetPlayer: {fileID: 0}
   goAwayBat: {fileID: 0}
   carryingPlayer: 0
