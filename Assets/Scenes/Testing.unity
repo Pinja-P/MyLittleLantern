@@ -26747,7 +26747,7 @@ PrefabInstance:
     - target: {fileID: 8227249910054170360, guid: eadea9d018d243c4b822bf89439e1be9, type: 3}
       propertyPath: lyhty
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1573977327}
     - target: {fileID: 8271240401110875357, guid: eadea9d018d243c4b822bf89439e1be9, type: 3}
       propertyPath: m_Name
       value: LanternFuelUI
@@ -30516,6 +30516,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1573977327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1617637705934004783, guid: 41715d4f6681fe34ca4c15281b9341fc, type: 3}
+  m_PrefabInstance: {fileID: 1872084720}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8190c0bac150c46aa3ff842a0d3caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lyhty
 --- !u!1 &1614163360 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 751693934791544257, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
