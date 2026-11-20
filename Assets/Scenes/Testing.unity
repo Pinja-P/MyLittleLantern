@@ -31112,9 +31112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   LepakkoPrefab: {fileID: 6646961573028172582, guid: 7d0151456df321c4d9311570a2fa6478, type: 3}
-  LepakkoSpawn: {fileID: 0}
-  GoAwayBat: {fileID: 0}
-  Lepakko: {fileID: 0}
+  LepakkoSpawn: {fileID: 1514019980954706168}
+  GoAwayBat: {fileID: 6735210162776233335}
+  Lepakko: {fileID: 5880262693532839053, guid: 7d0151456df321c4d9311570a2fa6478, type: 3}
 --- !u!4 &7684994651920757097
 Transform:
   m_ObjectHideFlags: 0
