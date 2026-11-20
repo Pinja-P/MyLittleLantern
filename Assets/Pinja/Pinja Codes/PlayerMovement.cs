@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D playerRB;
 
+    [SerializeField] private CinemachineCamera camA;
+    [SerializeField] private CinemachineCamera camB;
+
     //Movement
     float moveSpeed;
     public float walkSpeed = 5f;
@@ -57,8 +60,29 @@ public class PlayerMovement : MonoBehaviour
     {
         if (batCarry)
         {
+            SwitchToCamB();
+        }
+        if (batCarry)
+        {
+            
             transform.position = batCarrier.transform.position;
             return;
-        }      
+        }
+        
+    }
+
+    public void SwitchToCamA()
+    {
+        camA.Priority = 10;
+        camB.Priority = 5;
+    }
+
+    public void SwitchToCamB()
+    {
+        camB.transform.position = playerRB.position;
+        camB.LookAt = null;
+        camB.Follow = null;
+        camB.Priority = 10;
+        camA.Priority = 5;
     }
 }

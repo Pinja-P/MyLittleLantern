@@ -4,7 +4,7 @@ public class DeathManager : MonoBehaviour
 {
     public static DeathManager Death;
     public Transform respawnPoint;
-   // public GameObject Camera;
+    public PlayerMovement playerMovement;
 
     private void Awake()
     {
@@ -17,6 +17,7 @@ public class DeathManager : MonoBehaviour
          if (collision.CompareTag("Death"))
          {
              transform.position = respawnPoint.position;
+             //playerMovement.SwitchToCamA();
          }
      } 
 
