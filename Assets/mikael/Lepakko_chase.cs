@@ -18,7 +18,7 @@ public class Lepakko_chase : MonoBehaviour
     void Start()
     {
         targetPlayer = GameObject.FindGameObjectWithTag("Player");
-        goAwayBat = GameObject.FindGameObjectWithTag("GoAwayBat");
+      
         
 
     }
@@ -47,8 +47,9 @@ public class Lepakko_chase : MonoBehaviour
         }
     }
 
-    public void StartChasing(Transform player)
+    public void StartChasing(Transform player, GameObject exitpoint)
     {
+        goAwayBat = exitpoint;
         if (Lyhty.instance != null && Lyhty.instance.brightnessLevel >= 3)
         {
             return;
@@ -56,6 +57,7 @@ public class Lepakko_chase : MonoBehaviour
         isStopped = false;
         targetPlayer = player.gameObject;
         isChasing = true;
+        
     }
 
     private void CheckLanter()

@@ -4,14 +4,20 @@ using UnityEngine;
 public class trigger_area : MonoBehaviour
 {
     public GameObject LepakkoPrefab;
-    private GameObject LepakkoSpawn;
-   
+    public GameObject LepakkoSpawn;
+    public GameObject GoAwayBat;
     public Lepakko_chase Lepakko;
     private bool HasSpawned = false;
   
     void Start() 
     {
-        LepakkoSpawn = GameObject.FindGameObjectWithTag("Lepakko_Spawn");
+        
+
+        Transform goAwayTransform = transform.Find("GoAwayBat");
+        if (goAwayTransform != null)
+        {
+            GoAwayBat = goAwayTransform.gameObject;
+        }
     }
    
 
@@ -26,7 +32,7 @@ public class trigger_area : MonoBehaviour
             if (spawnedObj.TryGetComponent(out Lepakko_chase batScript))
             {
                 Lepakko = batScript;
-                Lepakko.StartChasing(other.transform);
+                Lepakko.StartChasing(other.transform, GoAwayBat);
             }
             
         }
