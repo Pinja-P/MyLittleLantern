@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 
 
@@ -9,7 +10,7 @@ using UnityEngine.InputSystem;
 public class Lyhty : MonoBehaviour
 {
     [Header("Light Settings")]
-    
+    public Light2D light2D;
     public SpriteRenderer lanternRenderer;
 
     [Range(1, 3)]
@@ -43,7 +44,7 @@ public class Lyhty : MonoBehaviour
     }
 
     public void Start()
-    {
+    { 
         currentFuel = fuelCapacity;
         UpdateSprite();
     }
