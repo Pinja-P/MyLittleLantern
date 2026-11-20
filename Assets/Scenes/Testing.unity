@@ -26446,7 +26446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 751693934791544257, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1694607423825235341, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
       propertyPath: m_Camera
@@ -26454,7 +26454,15 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1694607423825235341, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694607423825235341, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 657620339
+      objectReference: {fileID: 0}
+    - target: {fileID: 3695202412856407876, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4567972886743730013, guid: 320f887d7a55f7b4bb1b2c4d97599dcb, type: 3}
       propertyPath: m_Pivot.x
@@ -26821,10 +26829,6 @@ PrefabInstance:
     - target: {fileID: 5066332789273973757, guid: eadea9d018d243c4b822bf89439e1be9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6727096048884532660, guid: eadea9d018d243c4b822bf89439e1be9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6727096048884532660, guid: eadea9d018d243c4b822bf89439e1be9, type: 3}
       propertyPath: m_SortingLayerID
@@ -30649,8 +30653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4ae53863f8dc94c88fb51f05e5b2f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  CMCameraMain: {fileID: 0}
-  CMCameraStill: {fileID: 0}
   walkSpeed: 5
   sneakSpeed: 3
   batCarry: 0
@@ -31735,6 +31737,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   LepakkoPrefab: {fileID: 6646961573028172582, guid: 7d0151456df321c4d9311570a2fa6478, type: 3}
+  LepakkoSpawn: {fileID: 0}
+  GoAwayBat: {fileID: 0}
   Lepakko: {fileID: 0}
 --- !u!4 &7684994651920757097
 Transform:
