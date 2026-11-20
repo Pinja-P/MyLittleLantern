@@ -20,7 +20,7 @@ public class trigger_area : MonoBehaviour
         if (!HasSpawned && other.CompareTag("Player"))
         {   
             HasSpawned = true;
-            GameObject spawnedObj = Instantiate(LepakkoPrefab, LepakkoSpawn.transform.position, Quaternion.identity);
+            var spawnedObj = Instantiate(LepakkoPrefab, LepakkoSpawn.transform.position, Quaternion.identity);
             
 
             if (spawnedObj.TryGetComponent(out Lepakko_chase batScript))
