@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 1221610244986280873}
   - component: {fileID: 9111098390934469004}
   - component: {fileID: 1617637705934004783}
+  - component: {fileID: 7313970970598996583}
   - component: {fileID: 5745264015913008153}
   - component: {fileID: 8741699532625650232}
   - component: {fileID: 6507154773191574894}
@@ -219,6 +220,22 @@ MonoBehaviour:
   fuelCapacity: 100
   fuelBurnout: 1
   currentFuel: 0
+--- !u!114 &7313970970598996583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2150099084806782217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d4be16459aa724db0a2b8bf6521424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
+  GameIsPaused: 0
+  pauseMenuUI: {fileID: 0}
+  menuSelection: {fileID: 0}
+  settingsUI: {fileID: 0}
 --- !u!212 &5745264015913008153
 SpriteRenderer:
   serializedVersion: 2
