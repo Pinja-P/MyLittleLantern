@@ -43,7 +43,7 @@ public class RealLight : MonoBehaviour
             realLight.lightCookieSprite = lyhty.lanternRenderer.sprite;
         }
 
-        // Adjust the real light's brightness to match the level
+       
         switch (lyhty.brightnessLevel)
         {
             case 1:
